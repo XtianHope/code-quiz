@@ -61,7 +61,3 @@ body {
     font-size: 18px;
     cursor: pointer;
   }
-
-  .quiz:not(#question1) {
-    display: none;
-  }

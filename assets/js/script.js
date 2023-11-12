@@ -12,6 +12,20 @@ function init () {
     showStart();
 }
 
+// Timer
+function setTime() {
+    displayQuestions();
+    let timerInterval = setInterval(function() {
+      secondsLeft--;
+      timer.textContent = "";
+      timer.textContent = "Time: " + secondsLeft;
+      if (secondsLeft <= 0 || questionCount === questions.length) {
+        clearInterval(timerInterval);
+        captureUserScore();
+      } 
+    }, 1000);
+  }
+
 //Index to keep track of the current question user is on
 var currentQuestionIndex = 1;
 
