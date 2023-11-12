@@ -21,6 +21,10 @@ function showEnd() {
     endScreen.style.display = null;
 }
 
+startButton.addEventListener("click", function(event) {
+    showQuiz();
+});
+
 function init () {
     showStart();
 }
