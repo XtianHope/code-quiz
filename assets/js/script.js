@@ -13,7 +13,8 @@ function init () {
 }
 
 //Index to keep track of the current question user is on
-var currentQuestionIndex = 0;
+var currentQuestionIndex = 1;
+
 
 // Questions and Answers
 var questions = [
@@ -65,6 +66,7 @@ function renderQuestion(){
     
 }
 
+
 // Function to show the start screen
 function showStart() {
     startScreen.style.display = null;
@@ -75,8 +77,10 @@ function showStart() {
 // Function to show the quiz screen
 function showQuiz() {
     startScreen.style.display = "none";
-    quizScreen.style.display = null;
+    quizScreen.style.display = "flex";
     endScreen.style.display = "none";
+
+    document.getElementById("question1").style.display = "flex";
 }
 
 // Function to show the end screen
@@ -92,21 +96,27 @@ startButton.addEventListener("click", function(event) {
 });
 
 // Event listener added to take user through the quiz upon clicking the answer buttons
-quizScreen.addEventListener("click", function(event) {
-    if (event.target.matches("button")) {
+quizScreen.addEventListener("click", function (event) {
+    if (event.target.id.startsWith("next-btn")) {
         showEnd();
     }
 });
 
 // Event listener added to show the next question upon clicking the next button, show end of quiz if no more questions remain
-nextButton.addEventListener("click", function(event) {
+nextButton.addEventListener("click", function (event) {
     currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-        renderQuestion();
+    var currentQuestion = document.getElementById("question" + currentQuestionIndex);
+  
+    if (currentQuestion) {
+      document.querySelectorAll(".quiz").forEach(function (quiz) {
+        quiz.style.display = "none";
+      });
+  
+      currentQuestion.style.display = "flex";
     } else {
-        showEnd();
+      showEnd();
     }
-});
+  });
 
 // Event listener for submitting score button
 submitScoreButton.addEventListener("click", function () {
@@ -119,7 +129,7 @@ function init () {
 }
 
 // Store high scores
-var highScores = JSON.parse(localStorage,getItem("highScores")) || [];
+var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
 // Initial function call to set up the start screen
 init();

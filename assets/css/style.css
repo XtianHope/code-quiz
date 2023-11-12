@@ -20,6 +20,10 @@ body {
     font-weight: bold;
   }
 
+  .quiz:not(#question1) {
+    display: none;
+  }
+
   .quiz p {
     font-size: 30px;
     font-weight: bold;
@@ -56,4 +60,8 @@ body {
     padding: 10px 20px;
     font-size: 18px;
     cursor: pointer;
+  }
+
+  .quiz:not(#question1) {
+    display: none;
   }
