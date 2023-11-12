@@ -41,7 +41,7 @@ function setTime() {
 var currentQuestionIndex = 1;
 
 
-// Questions and Answers
+// Questions and Answers Array
 var questions = [
     {
         question: "What does HTML stand for?",
@@ -172,11 +172,18 @@ nextButton.addEventListener("click", function (event) {
 // Event listener for submitting score button
 submitScoreButton.addEventListener("click", function () {
     var userInitals = initialsInput.value;
+    var userScore = timeLeft;
+    var userEntry = {initials: userInitials, score: userScore };
+    highScores.push(userEntry);
 });
 
 
-// Store high scores
+// Store high scores in local storage
 var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+/*
+local.Storage.setItem("highScores", JSON.stringify(highScores));
+});
+*/
 
 // Initial function call to set up the start screen
 init();
