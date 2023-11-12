@@ -148,19 +148,6 @@ quizScreen.addEventListener("click", function (event) {
 });
 
 
-/*quizScreen.addEventListener("click", function (event) {
-    if (event.target.id.startsWith("answer")) {
-        if (answer-1-btn == true)
-        console.log("answer-1-btn")
-    } else {
-        console.log("not answer-1-btn")
-    }
-    if (event.target.id.startsWith("next-btn")) {
-        showEnd();
-    }
-});*/
-
-
 // Event listener for submitting score button
 submitScoreButton.addEventListener("click", function () {
     var userInitials = initialsInput.value;
