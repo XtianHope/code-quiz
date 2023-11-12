@@ -7,13 +7,17 @@ var nextButton = document.querySelector('.quiz button[id^="next-btn"]');
 var initialsInput = document.querySelector("initials")
 var submitScoreButton = document.querySelector("#submit-score")
 
+// Variable to set timer in seconds
+// var timeLeft = 300;
+// var elem = document.querySelector('timer');
+
 // Function to initialize the quiz
 function init () {
     showStart();
 }
 
 // Timer
-function setTime() {
+/* function setTime() {
     displayQuestions();
     let timerInterval = setInterval(function() {
       secondsLeft--;
@@ -21,10 +25,13 @@ function setTime() {
       timer.textContent = "Time: " + secondsLeft;
       if (secondsLeft <= 0 || questionCount === questions.length) {
         clearInterval(timerInterval);
+        showEnd();
         captureUserScore();
       } 
     }, 1000);
   }
+*/
+
 
 //Index to keep track of the current question user is on
 var currentQuestionIndex = 1;
