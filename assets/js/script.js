@@ -21,8 +21,15 @@ function showEnd() {
     endScreen.style.display = null;
 }
 
+// Event listener added to take user to Quiz screen upon clicking the start button
 startButton.addEventListener("click", function(event) {
     showQuiz();
+});
+
+quizScreen.addEventListener("click", function(event) {
+    if (event.target.matches("button")) {
+        showEnd();
+    }
 });
 
 function init () {
