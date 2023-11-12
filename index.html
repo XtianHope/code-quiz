@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,141 +16,147 @@
       <header class="container">
         <h1>Coding Quiz</h1>
       </header>
-      <p>Please answer each question within the specified time limit of 5 minutes. Timer will begin upon clicking the Start button. Note that incorrect answers will result in a penalty of 10 seconds deducted from your total time.</p>
+      <p>Please answer each question within the specified time limit of 5 minutes. Timer will begin upon clicking the
+        Start button. Note that incorrect answers will result in a penalty of 10 seconds deducted from your total time.
+      </p>
       <button id="start-btn">Start</button>
     </section>
 
-    <section class="quiz" id="question1">
-      <header class="container">
-       <section class="question-1"> <h2>Question 1</h2>
-      </header>
-      <p>What does HTML stand for?</p>
-      <button id="answer-1-btn">1. HyperText Markup Language</button>
-      <button id="answer-2-btn">2. High-Level Text Management Language</button>
-      <button id="answer-3-btn">3. HyperTransfer Markup Language</button>
-      <button id="answer-4-btn">4. HyperText Manipulation Language</button>
-      <button id="next-btn1">Next</button>
-    </section>
-  </section>
+    <div id="quiz-screen">
+      <section class="quiz" id="question1">
+        <header class="container">
+          <section class="question-1">
+            <h2>Question 1</h2>
+        </header>
+        <p>What does HTML stand for?</p>
+        <button id="answer-q1-a1-btn">1. HyperText Markup Language</button>
+        <button id="answer-q1-a2-btn">2. High-Level Text Management Language</button>
+        <button id="answer-q1-a3-btn">3. HyperTransfer Markup Language</button>
+        <button id="answer-q1-a4-btn">4. HyperText Manipulation Language</button>
+        <button id="next-btn1">Next</button>
+      </section>
+      </section>
 
-    <section class="quiz" id="question2">
-      <header class="container">
-        <h2>Question 2</h2>
-      </header>
-      <p>What is the purpose of the console.log() function in JavaScript?</p>
-      <button>1. Display a message in the console</button>
-      <button>2. Log information to the server</button>
-      <button>3. Print content on the webpage</button>
-      <button>4. Define a new variable</button>
-      <button id="next-btn2">Next</button>
-    </section>
+      <section class="quiz" id="question2">
+        <header class="container">
+          <h2>Question 2</h2>
+        </header>
+        <p>What is the purpose of the console.log() function in JavaScript?</p>
+        <button id="answer-q2-a1-btn">1. Display a message in the console</button>
+        <button id="answer-q2-a2-btn">2. Log information to the server</button>
+        <button id="answer-q2-a3-btn">3. Print content on the webpage</button>
+        <button id="answer-q2-a4-btn">4. Define a new variable</button>
+        <button id="next-btn2">Next</button>
+      </section>
 
-    <section class="quiz" id="question3">
-      <header class="container">
-        <h2>Question 3</h2>
-      </header>
+      <section class="quiz" id="question3">
+        <header class="container">
+          <h2>Question 3</h2>
+        </header>
         <p>How do you declare a variable named count and assign it the value 10?</p>
-        <button>1. var count = 10;</button> 
-        <button>2. variable count = 10;</button> 
-        <button>3. count = 10;</button> 
-        <button>4. declare count = 10;</button> 
+        <button id="answer-q3-a1-btn">1. var count = 10;</button>
+        <button id="answer-q3-a2-btn">2. variable count = 10;</button>
+        <button id="answer-q3-a3-btn">3. count = 10;</button>
+        <button id="answer-q3-a4-btn">4. declare count = 10;</button>
         <button id="next-btn3">NEXT</button>
-      </section>     
+      </section>
 
       <section class="quiz" id="question4">
         <header class="container">
           <h2>Question 4</h2>
-        </header> 
-          <p>What is the result of the expression 5 + "5" in JavaScript?</p>
-          <button>1. 55</button> 
-          <button>2. 10</button> 
-          <button>3. 5</button> 
-          <button>4. Error</button> 
-          <button id="next-btn4">NEXT</button>
-        </section>     
-      
-        <section class="quiz" id="question5">
-          <header class="container">
-            <h2>Question 5</h2>
-          </header>   
-          <p>What does the term "Boolean" represent in JavaScript?</p>
-          <button>1. A type of loop</button> 
-          <button>2. A sequence of characters</button> 
-          <button>3. A data type representing true or false</button> 
-          <button>4. A function declaration</button> 
-          <button id="next-btn5">NEXT</button>
-        </section>     
-
-        <section class="quiz" id="question6">
-          <header class="container">
-            <h2>Question 6</h2>    
-          </header>  
-          <p>What is JavaScript used for in web development?</p>
-          <button>1. Styling web pages</button> 
-          <button>2. Adding interactivity to websites</button> 
-          <button>3. Creating database tables</button> 
-          <button>4. Defining webpage structure</button> 
-          <button id="next-btn6">NEXT</button>
-        </section>     
-
-        <section class="quiz" id="question7">
-          <header class="container">
-            <h2>Question 7</h2>  
-          </header> 
-          <p>Which keyword is used to declare a variable in JavaScript?</p>
-          <button>1. let</button> 
-          <button>2. variable</button> 
-          <button>3. var</button> 
-          <button>4. const</button> 
-          <button id="next-btn7">NEXT</button>
-        </section>     
-
-        <section class="quiz" id="question8">
-          <header class="container">
-            <h2>Question 8</h2>  
-          </header>
-          <p>Which function is used to display a message in a popup box?</p>
-          <button>1. popup()</button> 
-          <button>2. prompt()</button> 
-          <button>3. message()</button> 
-          <button>4. alert()</button> 
-          <button id="next-btn8">NEXT</button>
-        </section>     
-
-        <section class="quiz" id="question9">
-          <header class="container">
-            <h2>Question 9</h2>
-          </header>
-          <p>Which symbol is used for single-line comments in JavaScript?</p>
-          <button>1. #</button> 
-          <button>2. //</button> 
-          <button>3. /</button> 
-          <button>4. --</button> 
-          <button id="next-btn9">NEXT</button>
-        </section>     
-
-        <section class="quiz" id="question10">
-          <header class="container">
-            <h2>Question 10</h2>
-          </header>
-          <p>In JavaScript, what does the term "array" represent?</p>
-          <button>1. A group of related variables</button> 
-          <button>2. A type of loop</button> 
-          <button>3. A sequence of characters</button> 
-          <button>4. A mathematical operation</button>
-          <button id="next-btn10">NEXT</button>
-        </section>     
-
-      </section>       
-      <section class="end">
-        <header class="container">
-          <h2>End</h2>
         </header>
-        <label for="initials">Enter your initials:</label>
-        <input type="text" id="initials" />
-        <button id="submit-score">Submit Score</button>
+        <p>What is the result of the expression 5 + "5" in JavaScript?</p>
+        <button>1. 55</button>
+        <button>2. 10</button>
+        <button>3. 5</button>
+        <button>4. Error</button>
+        <button id="next-btn4">NEXT</button>
       </section>
-    </main>
-    <script src="./assets/js/script.js"></script>
-  </body>
+
+      <section class="quiz" id="question5">
+        <header class="container">
+          <h2>Question 5</h2>
+        </header>
+        <p>What does the term "Boolean" represent in JavaScript?</p>
+        <button>1. A type of loop</button>
+        <button>2. A sequence of characters</button>
+        <button>3. A data type representing true or false</button>
+        <button>4. A function declaration</button>
+        <button id="next-btn5">NEXT</button>
+      </section>
+
+      <section class="quiz" id="question6">
+        <header class="container">
+          <h2>Question 6</h2>
+        </header>
+        <p>What is JavaScript used for in web development?</p>
+        <button>1. Styling web pages</button>
+        <button>2. Adding interactivity to websites</button>
+        <button>3. Creating database tables</button>
+        <button>4. Defining webpage structure</button>
+        <button id="next-btn6">NEXT</button>
+      </section>
+
+      <section class="quiz" id="question7">
+        <header class="container">
+          <h2>Question 7</h2>
+        </header>
+        <p>Which keyword is used to declare a variable in JavaScript?</p>
+        <button>1. let</button>
+        <button>2. variable</button>
+        <button>3. var</button>
+        <button>4. const</button>
+        <button id="next-btn7">NEXT</button>
+      </section>
+
+      <section class="quiz" id="question8">
+        <header class="container">
+          <h2>Question 8</h2>
+        </header>
+        <p>Which function is used to display a message in a popup box?</p>
+        <button>1. popup()</button>
+        <button>2. prompt()</button>
+        <button>3. message()</button>
+        <button>4. alert()</button>
+        <button id="next-btn8">NEXT</button>
+      </section>
+
+      <section class="quiz" id="question9">
+        <header class="container">
+          <h2>Question 9</h2>
+        </header>
+        <p>Which symbol is used for single-line comments in JavaScript?</p>
+        <button>1. #</button>
+        <button>2. //</button>
+        <button>3. /</button>
+        <button>4. --</button>
+        <button id="next-btn9">NEXT</button>
+      </section>
+
+      <section class="quiz" id="question10">
+        <header class="container">
+          <h2>Question 10</h2>
+        </header>
+        <p>In JavaScript, what does the term "array" represent?</p>
+        <button>1. A group of related variables</button>
+        <button>2. A type of loop</button>
+        <button>3. A sequence of characters</button>
+        <button>4. A mathematical operation</button>
+        <button id="next-btn10">NEXT</button>
+      </section>
+    </div>
+
+    </section>
+    <section class="end">
+      <header class="container">
+        <h2>End</h2>
+      </header>
+      <label for="initials">Enter your initials:</label>
+      <input type="text" id="initials" />
+      <button id="submit-score">Submit Score</button>
+    </section>
+  </main>
+  <script src="./assets/js/script.js"></script>
+</body>
+
 </html>

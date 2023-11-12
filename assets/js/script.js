@@ -1,15 +1,12 @@
 // Declaring/selecting HTML elements
 var startScreen = document.querySelector(".start");
-var quizScreen = document.querySelector(".quiz");
+var quizScreen = document.querySelector("#quiz-screen");
 var endScreen = document.querySelector(".end");
 var startButton = document.querySelector("#start-btn");
 var nextButton = document.querySelector('.quiz button[id^="next-btn"]');
 var initialsInput = document.querySelector("initials");
 var submitScoreButton = document.querySelector("#submit-score");
-var button1 = document.querySelector("#answer-1-btn");
-var button2 = document.querySelector("#answer-2-btn");
-var button3 = document.querySelector("#answer-3-btn");
-var button4 = document.querySelector("#answer-4-btn");
+
 
 // Variable to set timer in seconds - 5 miutes
 var timeLeft = 300;
@@ -22,7 +19,6 @@ function init() {
 
 // Timer
 function setTime() {
-    displayQuestions();
     let timerInterval = setInterval(function () {
         timeLeft--;
         document.getElementById("timer").textContent = "Time: " + timeLeft;
@@ -104,16 +100,11 @@ var questions = [
     },
 ]
 
-// NEED A FUNCTION TO RENDER CURRENT QUESTION AND ANSWER HERE
-function renderQuestion() {
-    var currentQuestion = questions[currentQuestionIndex];
-
-}
 
 
 // Function to show the start screen
 function showStart() {
-    startScreen.style.display = null;
+    startScreen.style.display = "flex";
     quizScreen.style.display = "none";
     endScreen.style.display = "none";
 }
@@ -131,12 +122,13 @@ function showQuiz() {
 function showEnd() {
     startScreen.style.display = "none";
     quizScreen.style.display = "none";
-    endScreen.style.display = null;
+    endScreen.style.display = "flex";
 }
 
 // Event listener added to take user to Quiz screen upon clicking the start button
 startButton.addEventListener("click", function (event) {
     showQuiz();
+    setTime();
 });
 
 // Event listener added to take user through the quiz upon clicking the answer buttons
@@ -171,7 +163,7 @@ quizScreen.addEventListener("click", function (event) {
 
 // Event listener for submitting score button
 submitScoreButton.addEventListener("click", function () {
-    var userInitals = initialsInput.value;
+    var userInitials = initialsInput.value;
     var userScore = timeLeft;
     var userEntry = { initials: userInitials, score: userScore };
     var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
