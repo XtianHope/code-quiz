@@ -26,6 +26,7 @@ startButton.addEventListener("click", function(event) {
     showQuiz();
 });
 
+// Event listener added to take user through the quiz upon clicking the answer buttons
 quizScreen.addEventListener("click", function(event) {
     if (event.target.matches("button")) {
         showEnd();
