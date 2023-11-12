@@ -172,17 +172,18 @@ quizScreen.addEventListener("click", function (event) {
 nextButton.addEventListener("click", function (event) {
     currentQuestionIndex++;
     var currentQuestion = document.getElementById("question" + currentQuestionIndex);
-  
+
     if (currentQuestion) {
-      document.querySelectorAll(".quiz").forEach(function (quiz) {
-        quiz.style.display = "none";
-      });
-  
-      currentQuestion.style.display = "flex";
+        document.querySelectorAll(".quiz").forEach(function (quiz) {
+            quiz.style.display = "none";
+        });
+
+        currentQuestion.style.display = "flex";
+        renderQuestion(); // Render the new question
     } else {
-      showEnd();
+        showEnd();
     }
-  });
+});
 
 // Event listener for submitting score button
 submitScoreButton.addEventListener("click", function () {
