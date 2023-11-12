@@ -108,5 +108,8 @@ function init () {
     showStart();
 }
 
+// Store high scores
+var highScores = JSON,parse(localStorage,getItem("highScores")) || [];
+
 // Initial function call to set up the start screen
 init();
