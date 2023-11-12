@@ -6,10 +6,10 @@ var startButton = document.querySelector("#start-btn");
 var nextButton = document.querySelector('.quiz button[id^="next-btn"]');
 var initialsInput = document.querySelector("initials");
 var submitScoreButton = document.querySelector("#submit-score");
-var button1 = document.querySelector("answer-1-btn");
-var button2 = document.querySelector("answer-2-btn");
-var button3 = document.querySelector("answer-3-btn");
-var button4 = document.querySelector("answer-4-btn");
+var button1 = document.querySelector("#answer-1-btn");
+var button2 = document.querySelector("#answer-2-btn");
+var button3 = document.querySelector("#answer-3-btn");
+var button4 = document.querySelector("#answer-4-btn");
 
 // Variable to set timer in seconds
 // var timeLeft = 300;
@@ -46,52 +46,62 @@ var questions = [
     {
         question: "What does HTML stand for?",
         options: ["HyperText Markup Language", "High-Level Text Management Language", "HyperTransfer Markup Language", "HyperText Manipulation Language"],
-        answer: ".HyperText Markup Language"
+        answer: "HyperText Markup Language"
     },
 
     {
         question: "What is the purpose of the console.log() function in JavaScript?",
         options: ["Display a message in the console", "Log information to the server", "Print content on the webpage", "Define a new variable"],
+        answer: "Display a message in the console"
     },
 
     {
         question: "How do you declare a variable named count and assign it the value 10?",
         options: ["var count = 10;", "variable count = 10;", "count = 10;", "declare count = 10;"],
+        answer: "var count = 10"
     },
 
     {
         question: "What is the result of the expression 5 + 5 in JavaScript?",
         options: ["55", "10", "5", "Error"],
+        answer: "55"
     },
 
     {
         question: "What does the term Boolean represent in JavaScript?",
         options: ["A type of loop", "A sequence of characters", "A data type representing true or false", "A function declaration"],
+        answer: "A data type representing true or false"
     },
 
     {
         question: "What is JavaScript used for in web development?",
         options: ["Styling web pages", "Adding interactivity to websites", "Creating database tables", "Defining webpage structure"],
+        answer: "Adding interactivity to websites"
     },
 
     {
         question: "Which keyword is used to declare a variable in JavaScript?",
         options: ["let", "variable", "var", "const"],
+        answer: "var"
     },
+
 
     {
         question: "Which function is used to display a message in a popup box?",
         options: ["popup()", "prompt()", "message()", "alert()"],
+        answer: "alert()"
     },
 
     {
         question: "Which symbol is used for single-line comments in JavaScript?",
         options: ["#", "//", "/", "__"],
+        answer: "//"
     },
 
     {
         question: "In JavaScript, what does the term array represent?",
-        a options: ["A group of related variables", "A type of loop", "A sequence of characters", "A mathematical operation"],
+         options: ["A group of related variables", "A type of loop", "A sequence of characters", "A mathematical operation"],
+        answer: "A group of related variables"
     },
 ]
 
@@ -132,7 +142,7 @@ startButton.addEventListener("click", function(event) {
 
 // Event listener added to take user through the quiz upon clicking the answer buttons
 quizScreen.addEventListener("click", function (event) {
-    if (event.target.id.startsWith("answer-1-btn")) {
+    /* if (event.target.id.startsWith("answer-1-btn")) {
         if (answer-1-btn == true)
     }
 
@@ -144,7 +154,7 @@ quizScreen.addEventListener("click", function (event) {
       }
 
 
-
+*/
     if (event.target.id.startsWith("next-btn")) {
         showEnd();
     }
