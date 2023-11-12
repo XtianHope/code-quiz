@@ -4,8 +4,12 @@ var quizScreen = document.querySelector(".quiz");
 var endScreen = document.querySelector(".end");
 var startButton = document.querySelector("#start-btn");
 var nextButton = document.querySelector('.quiz button[id^="next-btn"]');
-var initialsInput = document.querySelector("initials")
-var submitScoreButton = document.querySelector("#submit-score")
+var initialsInput = document.querySelector("initials");
+var submitScoreButton = document.querySelector("#submit-score");
+var button1 = document.querySelector("answer-1-btn");
+var button2 = document.querySelector("answer-2-btn");
+var button3 = document.querySelector("answer-3-btn");
+var button4 = document.querySelector("answer-4-btn");
 
 // Variable to set timer in seconds
 // var timeLeft = 300;
@@ -41,43 +45,53 @@ var currentQuestionIndex = 1;
 var questions = [
     {
         question: "What does HTML stand for?",
-        answers: ["HyperText Markup Language", "High-Level Text Management Language", "HyperTransfer Markup Language", "HyperText Manipulation Language"],
+        options: ["HyperText Markup Language", "High-Level Text Management Language", "HyperTransfer Markup Language", "HyperText Manipulation Language"],
+        answer: ".HyperText Markup Language"
     },
+
     {
         question: "What is the purpose of the console.log() function in JavaScript?",
-        answers: ["Display a message in the console", "Log information to the server", "Print content on the webpage", "Define a new variable"],
+        options: ["Display a message in the console", "Log information to the server", "Print content on the webpage", "Define a new variable"],
     },
+
     {
         question: "How do you declare a variable named count and assign it the value 10?",
-        answers: ["var count = 10;", "variable count = 10;", "count = 10;", "declare count = 10;"],
+        options: ["var count = 10;", "variable count = 10;", "count = 10;", "declare count = 10;"],
     },
+
     {
         question: "What is the result of the expression 5 + 5 in JavaScript?",
-        answers: ["55", "10", "5", "Error"],
+        options: ["55", "10", "5", "Error"],
     },
+
     {
         question: "What does the term Boolean represent in JavaScript?",
-        answers: ["A type of loop", "A sequence of characters", "A data type representing true or false", "A function declaration"],
+        options: ["A type of loop", "A sequence of characters", "A data type representing true or false", "A function declaration"],
     },
+
     {
         question: "What is JavaScript used for in web development?",
-        answers: ["Styling web pages", "Adding interactivity to websites", "Creating database tables", "Defining webpage structure"],
+        options: ["Styling web pages", "Adding interactivity to websites", "Creating database tables", "Defining webpage structure"],
     },
+
     {
         question: "Which keyword is used to declare a variable in JavaScript?",
-        answers: ["let", "variable", "var", "const"],
+        options: ["let", "variable", "var", "const"],
     },
+
     {
         question: "Which function is used to display a message in a popup box?",
-        answers: ["popup()", "prompt()", "message()", "alert()"],
+        options: ["popup()", "prompt()", "message()", "alert()"],
     },
+
     {
         question: "Which symbol is used for single-line comments in JavaScript?",
-        answers: ["#", "//", "/", "__"],
+        options: ["#", "//", "/", "__"],
     },
+
     {
         question: "In JavaScript, what does the term array represent?",
-        answers: ["A group of related variables", "A type of loop", "A sequence of characters", "A mathematical operation"],
+        a options: ["A group of related variables", "A type of loop", "A sequence of characters", "A mathematical operation"],
     },
 ]
 
@@ -118,6 +132,19 @@ startButton.addEventListener("click", function(event) {
 
 // Event listener added to take user through the quiz upon clicking the answer buttons
 quizScreen.addEventListener("click", function (event) {
+    if (event.target.id.startsWith("answer-1-btn")) {
+        if (answer-1-btn == true)
+    }
+
+
+    if (isLunchTime === true) {
+        console.log("Lunchtime");
+      } else {
+        console.log("Not Lunchtime");
+      }
+
+
+
     if (event.target.id.startsWith("next-btn")) {
         showEnd();
     }
