@@ -142,7 +142,22 @@ startButton.addEventListener("click", function(event) {
 
 // Event listener added to take user through the quiz upon clicking the answer buttons
 quizScreen.addEventListener("click", function (event) {
-    if (event.target.id.startsWith("answer-1-btn")) {
+    if (event.target.id.startsWith("answer")) {
+        // Check if the answer selected by the user is correct
+        if (event.target.textContent === questions[currentQuestionIndex - 1].answer) {
+            console.log("Correct!");
+        } else {
+            console.log("Incorrect!");
+            // Penalty for user selecting wrong answer
+            timeLeft -= 10;
+            document.getElementById("timer").textContent = "Time: " + timeLeft;
+        }
+    }
+});
+
+
+/*quizScreen.addEventListener("click", function (event) {
+    if (event.target.id.startsWith("answer")) {
         if (answer-1-btn == true)
         console.log("answer-1-btn")
     } else {
@@ -151,7 +166,7 @@ quizScreen.addEventListener("click", function (event) {
     if (event.target.id.startsWith("next-btn")) {
         showEnd();
     }
-});
+});*/
 
 // Event listener added to show the next question upon clicking the next button, show end of quiz if no more questions remain
 nextButton.addEventListener("click", function (event) {
