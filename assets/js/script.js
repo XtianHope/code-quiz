@@ -4,8 +4,7 @@ var quizScreen = document.querySelector(".quiz");
 var endScreen = document.querySelector(".end");
 var startButton = document.querySelector("#start-btn");
 var nextButton = document.querySelector("#next-btn");
-var questionContainer = document.querySelector("question-container");
-var questionTitle = document.querySelector("question-title");
+
 
 //Index to keep track of the current question user is on
 var currentQuestionIndex = 0;
