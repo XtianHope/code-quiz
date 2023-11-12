@@ -9,6 +9,17 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
+  .header {
+    font-size: 70px;
+    font-weight: bold;
+  }
+
+  .quiz p {
+    font-size: 30;
+    font-weight: bold;
+  }
+
+
   .quiz button {
     display: block;
     width: 25%;
