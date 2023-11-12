@@ -1,6 +1,7 @@
 var startScreen = document.querySelector(".start");
 var quizScreen = document.querySelector(".quiz");
 var endScreen = document.querySelector(".end");
+var startButton = document.querySelector("#start-btn");
 
 function showStart() {
     startScreen.style.display = null;
