@@ -103,6 +103,11 @@ nextButton.addEventListener("click", function(event) {
     }
 });
 
+// Event listener for submitting score button
+submitScoreButton.addEventListener("click", function ()) {
+    var userInitals = initialsInput.value ();
+}
+
 // Function to initialize the quiz
 function init () {
     showStart();
