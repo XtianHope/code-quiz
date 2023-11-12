@@ -54,18 +54,21 @@ var questions = [
     },
 ]
 
+// Function to show the start screen
 function showStart() {
     startScreen.style.display = null;
     quizScreen.style.display = "none";
     endScreen.style.display = "none";
 }
 
+// Function to show the quiz screen
 function showQuiz() {
     startScreen.style.display = "none";
     quizScreen.style.display = null;
     endScreen.style.display = "none";
 }
 
+// Function to show the end screen
 function showEnd() {
     startScreen.style.display = "none";
     quizScreen.style.display = "none";
@@ -84,8 +87,10 @@ quizScreen.addEventListener("click", function(event) {
     }
 });
 
+// Function to initialize the quiz
 function init () {
     showStart();
 }
 
+// Initial function call to set up the start screen
 init();
