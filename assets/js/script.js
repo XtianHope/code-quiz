@@ -21,7 +21,7 @@ function showEnd() {
 }
 
 function init () {
-
+    showStart();
 }
 
 init();
