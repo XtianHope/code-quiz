@@ -30,8 +30,8 @@ var questions = [
         answers: ["var count = 10;", "variable count = 10;", "count = 10;", "declare count = 10;"],
     },
     {
-        question: "What is the result of the expression 5 + "5" in JavaScript?",
-        answers: ["55<", "10", "5", "Error"],
+        question: "What is the result of the expression 5 + 5 in JavaScript?",
+        answers: ["55", "10", "5", "Error"],
     },
     {
         question: "What does the term "Boolean" represent in JavaScript?",
