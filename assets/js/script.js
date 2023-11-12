@@ -11,9 +11,9 @@ var button2 = document.querySelector("#answer-2-btn");
 var button3 = document.querySelector("#answer-3-btn");
 var button4 = document.querySelector("#answer-4-btn");
 
-// Variable to set timer in seconds
-// var timeLeft = 300;
-// var elem = document.querySelector('timer');
+// Variable to set timer in seconds - 5 miutes
+var timeLeft = 300;
+var elem = document.querySelector('timer');
 
 // Function to initialize the quiz
 function init () {
@@ -21,20 +21,20 @@ function init () {
 }
 
 // Timer
-/* function setTime() {
+function setTime() {
     displayQuestions();
-    let timerInterval = setInterval(function() {
-      secondsLeft--;
-      timer.textContent = "";
-      timer.textContent = "Time: " + secondsLeft;
-      if (secondsLeft <= 0 || questionCount === questions.length) {
+    let timerInterval = setInterval(function () {
+      timeLeft--;
+      document.getElementById("timer").textContent = "Time: " + timeLeft;
+  
+      if (timeLeft <= 0 || currentQuestionIndex > questions.length) {
         clearInterval(timerInterval);
         showEnd();
         captureUserScore();
-      } 
+      }
     }, 1000);
   }
-*/
+
 
 
 //Index to keep track of the current question user is on
@@ -142,19 +142,12 @@ startButton.addEventListener("click", function(event) {
 
 // Event listener added to take user through the quiz upon clicking the answer buttons
 quizScreen.addEventListener("click", function (event) {
-    /* if (event.target.id.startsWith("answer-1-btn")) {
+    if (event.target.id.startsWith("answer-1-btn")) {
         if (answer-1-btn == true)
+        console.log("answer-1-btn")
+    } else {
+        console.log("not answer-1-btn")
     }
-
-
-    if (isLunchTime === true) {
-        console.log("Lunchtime");
-      } else {
-        console.log("Not Lunchtime");
-      }
-
-
-*/
     if (event.target.id.startsWith("next-btn")) {
         showEnd();
     }
