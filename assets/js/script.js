@@ -87,6 +87,16 @@ quizScreen.addEventListener("click", function(event) {
     }
 });
 
+// Event listener added to show the next question upon clicking the next button, show end of quiz if no more questions remain
+nextButton.addEventListener("click", function(event) {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        renderQuestion();
+    } else {
+        showEnd();
+    }
+});
+
 // Function to initialize the quiz
 function init () {
     showStart();
