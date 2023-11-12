@@ -54,6 +54,12 @@ var questions = [
     },
 ]
 
+// NEED A FUNCTION TO RENDER CURRENT QUESTION AND ANSWER HERE
+function renderQuestion(){
+    var currentQuestion = questions[currentQuestionIndex];
+    
+}
+
 // Function to show the start screen
 function showStart() {
     startScreen.style.display = null;
