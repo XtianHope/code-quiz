@@ -13,7 +13,7 @@ var button4 = document.querySelector("#answer-4-btn");
 
 // Variable to set timer in seconds - 5 miutes
 var timeLeft = 300;
-var elem = document.querySelector('timer');
+var elem = document.querySelector('#timer');
 
 // Function to initialize the quiz
 function init () {
