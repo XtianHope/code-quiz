@@ -1,6 +1,6 @@
 var startEl = document.querySelector(".start");
-var startEl = document.querySelector(".quiz");
-var startEl = document.querySelector(".end");
+var quizEl = document.querySelector(".quiz");
+var endEl = document.querySelector(".end");
 
 function showStart() {
 
