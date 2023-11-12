@@ -7,3 +7,12 @@ body {
     height: 100vh;
     margin: 0;
   }
+
+  .card {
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+  }
