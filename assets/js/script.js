@@ -16,7 +16,7 @@ var timeLeft = 300;
 var elem = document.querySelector('#timer');
 
 // Function to initialize the quiz
-function init () {
+function init() {
     showStart();
 }
 
@@ -24,16 +24,16 @@ function init () {
 function setTime() {
     displayQuestions();
     let timerInterval = setInterval(function () {
-      timeLeft--;
-      document.getElementById("timer").textContent = "Time: " + timeLeft;
-  
-      if (timeLeft <= 0 || currentQuestionIndex > questions.length) {
-        clearInterval(timerInterval);
-        showEnd();
-        captureUserScore();
-      }
+        timeLeft--;
+        document.getElementById("timer").textContent = "Time: " + timeLeft;
+
+        if (timeLeft <= 0 || currentQuestionIndex > questions.length) {
+            clearInterval(timerInterval);
+            showEnd();
+            captureUserScore();
+        }
     }, 1000);
-  }
+}
 
 
 
@@ -100,15 +100,15 @@ var questions = [
 
     {
         question: "In JavaScript, what does the term array represent?",
-         options: ["A group of related variables", "A type of loop", "A sequence of characters", "A mathematical operation"],
+        options: ["A group of related variables", "A type of loop", "A sequence of characters", "A mathematical operation"],
         answer: "A group of related variables"
     },
 ]
 
 // NEED A FUNCTION TO RENDER CURRENT QUESTION AND ANSWER HERE
-function renderQuestion(){
+function renderQuestion() {
     var currentQuestion = questions[currentQuestionIndex];
-    
+
 }
 
 
@@ -136,7 +136,7 @@ function showEnd() {
 }
 
 // Event listener added to take user to Quiz screen upon clicking the start button
-startButton.addEventListener("click", function(event) {
+startButton.addEventListener("click", function (event) {
     showQuiz();
 });
 
@@ -189,17 +189,15 @@ nextButton.addEventListener("click", function (event) {
 submitScoreButton.addEventListener("click", function () {
     var userInitals = initialsInput.value;
     var userScore = timeLeft;
-    var userEntry = {initials: userInitials, score: userScore };
+    var userEntry = { initials: userInitials, score: userScore };
+    var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
     highScores.push(userEntry);
+    // Store high scores in local storage
+    local.Storage.setItem("highScores", JSON.stringify(highScores));
 });
 
 
-// Store high scores in local storage
-var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-/*
-local.Storage.setItem("highScores", JSON.stringify(highScores));
-});
-*/
+
 
 // Initial function call to set up the start screen
 init();
