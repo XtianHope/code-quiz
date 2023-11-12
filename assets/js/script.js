@@ -49,7 +49,7 @@ var questions = [
         answers: ["55", "10", "5", "Error"],
     },
     {
-        question: "What does the term "Boolean" represent in JavaScript?",
+        question: "What does the term Boolean represent in JavaScript?",
         answers: ["A type of loop", "A sequence of characters", "A data type representing true or false", "A function declaration"],
     },
     {
@@ -69,7 +69,7 @@ var questions = [
         answers: ["#", "//", "/", "__"],
     },
     {
-        question: "In JavaScript, what does the term "array" represent?",
+        question: "In JavaScript, what does the term array represent?",
         answers: ["A group of related variables", "A type of loop", "A sequence of characters", "A mathematical operation"],
     },
 ]
@@ -137,10 +137,6 @@ submitScoreButton.addEventListener("click", function () {
     var userInitals = initialsInput.value;
 });
 
-// Function to initialize the quiz
-function init () {
-    showStart();
-}
 
 // Store high scores
 var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
