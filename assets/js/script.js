@@ -3,7 +3,7 @@ var startScreen = document.querySelector(".start");
 var quizScreen = document.querySelector(".quiz");
 var endScreen = document.querySelector(".end");
 var startButton = document.querySelector("#start-btn");
-var nextButton = document.querySelector("#next-btn");
+var nextButton = document.querySelector(".quiz button[id^="next-btn"]");
 var initialsInput = document.querySelector("initials")
 var submitScoreButton = document.querySelector("#submit-score")
 
