@@ -166,9 +166,9 @@ quizScreen.addEventListener("click", function (event) {
     if (event.target.id.startsWith("answer")) {
         // Check if the answer selected by the user is correct
         if (event.target.textContent.indexOf(questions[currentQuestionIndex - 1].answer) > -1) {
-            alert("Correct!");
+            displayAnswerMessage("Correct!");
         } else {
-            alert("Incorrect!");
+            displayAnswerMessage("Incorrect!");
             // Penalty for user selecting wrong answer
             timeLeft -= 10;
             document.getElementById("timer").textContent = "Time: " + timeLeft;
@@ -176,6 +176,12 @@ quizScreen.addEventListener("click", function (event) {
         nextQuestion();
     }
 });
+
+// Function to display the answer message
+function displayAnswerMessage(message) {
+    var answerMessageElement = document.getElementById("answer-message");
+    answerMessageElement.textContent = message;
+}
 
 
 // Event listener for submitting score button
