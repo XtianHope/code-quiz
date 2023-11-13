@@ -88,6 +88,14 @@ body {
     margin-bottom: 20px;
   }
 
+  .end container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%
+  }
+  
   .end label {
     font-size: 20px;
     margin-top: 15px;
