@@ -140,6 +140,9 @@ function showHighScores() {
 var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 var highScoresList = document.querySelector("#high-scores-list");
 
+// Clear existing high scores
+highScoresList.innerHTML = "";
+
 // Display each high score
 highScores.forEach(function (score) {
     var li = document.createElement("li");
