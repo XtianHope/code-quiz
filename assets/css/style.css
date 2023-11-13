@@ -18,8 +18,15 @@ body {
   .header {
     font-size: 70px;
     font-weight: bold;
+    align-items: center;
   }
 
+  .quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
   .quiz p {
     font-size: 30px;
     font-weight: bold;
