@@ -5,6 +5,8 @@ body {
     height: 100vh;
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: center;
+    align-items: center;
   }
   
 
