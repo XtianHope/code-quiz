@@ -7,7 +7,6 @@ var nextButton = document.querySelector('.quiz button[id^="next-btn"]');
 var initialsInput = document.querySelector("#initials");
 var submitScoreButton = document.querySelector("#submit-score");
 var highScoresScreen = document.querySelector(".high-scores");
-var submitScoreButton = document.querySelector("#submit-score");
 var viewHighScoresButton = document.querySelector("#view-high-scores");
 
 
