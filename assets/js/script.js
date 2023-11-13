@@ -8,7 +8,7 @@ var initialsInput = document.querySelector("initials");
 var submitScoreButton = document.querySelector("#submit-score");
 var highScoresScreen = document.querySelector(".high-scores");
 var submitScoreButton = document.querySelector("#submit-score");
-var viewHighScoresButton = document.querySelector("#view-high-scores"); 
+var viewHighScoresButton = document.querySelector("#view-high-scores");
 
 
 // Variable to set timer in seconds - 5 miutes
@@ -138,7 +138,7 @@ startButton.addEventListener("click", function (event) {
 quizScreen.addEventListener("click", function (event) {
     if (event.target.id.startsWith("answer")) {
         // Check if the answer selected by the user is correct
-        if (event.target.textContent.indexOf(questions[currentQuestionIndex - 1].answer)>-1) {
+        if (event.target.textContent.indexOf(questions[currentQuestionIndex - 1].answer) > -1) {
             alert("Correct!");
         } else {
             alert("Incorrect!");
@@ -150,6 +150,15 @@ quizScreen.addEventListener("click", function (event) {
     }
 });
 
+// Function to show the high scores screen
+function showHighScores() {
+    startScreen.style.display = "none";
+    quizScreen.style.display = "none";
+    endScreen.style.display = "none";
+    highScoresScreen.style.display = "flex";
+// Retrieve and display high scores from the local storage
+var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+}
 
 // Event listener for submitting score button
 submitScoreButton.addEventListener("click", function () {
@@ -161,7 +170,7 @@ submitScoreButton.addEventListener("click", function () {
     // Store high scores in local storage
     localStorage.setItem("highScores", JSON.stringify(highScores));
 
-    // Show high scores after submitting
+// Show high scores after submitting
     showHighScores();
 });
 
