@@ -165,7 +165,10 @@ submitScoreButton.addEventListener("click", function () {
     showHighScores();
 });
 
-
+// Event listener for viewing high scores button
+viewHighScoresButton.addEventListener("click", function () {
+    showHighScores();
+});
 
 
 // Initial function call to set up the start screen
