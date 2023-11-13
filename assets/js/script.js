@@ -194,7 +194,6 @@ function nextQuestion() {
         });
 
         currentQuestion.style.display = "flex";
-        renderQuestion(); // Render the new question
     } else {
         showEnd();
     }
