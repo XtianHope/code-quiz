@@ -117,6 +117,11 @@ function showQuiz() {
     endScreen.style.display = "none";
     highScoresScreen.style.display = "none";
 
+// Hide all questions
+document.querySelectorAll(".quiz").forEach(function (quiz) {
+    quiz.style.display = "none";
+    });
+
     document.getElementById("question1").style.display = "flex";
 }
 

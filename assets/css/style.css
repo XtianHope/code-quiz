@@ -20,10 +20,6 @@ body {
     font-weight: bold;
   }
 
-  .quiz:not(#question1) {
-    display: none;
-  }
-
   .quiz p {
     font-size: 30px;
     font-weight: bold;
