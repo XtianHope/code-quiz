@@ -159,7 +159,10 @@ submitScoreButton.addEventListener("click", function () {
     var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
     highScores.push(userEntry);
     // Store high scores in local storage
-    local.Storage.setItem("highScores", JSON.stringify(highScores));
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+
+    // Show high scores after submitting
+    showHighScores();
 });
 
 
