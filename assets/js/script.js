@@ -135,8 +135,17 @@ function showHighScores() {
     quizScreen.style.display = "none";
     endScreen.style.display = "none";
     highScoresScreen.style.display = "flex";
+
 // Retrieve and display high scores from the local storage
 var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+var highScoresList = document.querySelector("#high-scores-list");
+
+// Display each high score
+highScores.forEach(function (score) {
+    var li = document.createElement("li");
+    li.textContent = score.initials + ": " + score.score;
+    highScoresList.appendChild(li);
+});
 }
 
 // Event listener added to take user to Quiz screen upon clicking the start button
