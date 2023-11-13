@@ -30,6 +30,7 @@ body {
   .quiz p {
     font-size: 30px;
     font-weight: bold;
+    margin-bottom: 20px;
   }
 
   .quiz button {
