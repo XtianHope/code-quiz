@@ -130,6 +130,16 @@ function showEnd() {
     highScoresScreen.style.display = "none";
 }
 
+// Function to show the high scores screen
+function showHighScores() {
+    startScreen.style.display = "none";
+    quizScreen.style.display = "none";
+    endScreen.style.display = "none";
+    highScoresScreen.style.display = "flex";
+// Retrieve and display high scores from the local storage
+var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+}
+
 // Event listener added to take user to Quiz screen upon clicking the start button
 startButton.addEventListener("click", function (event) {
     showQuiz();
@@ -152,15 +162,6 @@ quizScreen.addEventListener("click", function (event) {
     }
 });
 
-// Function to show the high scores screen
-function showHighScores() {
-    startScreen.style.display = "none";
-    quizScreen.style.display = "none";
-    endScreen.style.display = "none";
-    highScoresScreen.style.display = "flex";
-// Retrieve and display high scores from the local storage
-var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-}
 
 // Event listener for submitting score button
 submitScoreButton.addEventListener("click", function () {
