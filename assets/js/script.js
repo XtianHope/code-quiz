@@ -6,7 +6,6 @@ var startButton = document.querySelector("#start-btn");
 var initialsInput = document.querySelector("#initials");
 var submitScoreButton = document.querySelector("#submit-score");
 var highScoresScreen = document.querySelector(".high-scores");
-var viewHighScoresButton = document.querySelector("#view-high-scores");
 
 
 // Variable to set timer in seconds - 5 miutes
@@ -185,11 +184,6 @@ submitScoreButton.addEventListener("click", function () {
     localStorage.setItem("highScores", JSON.stringify(highScores));
 
 // Show high scores after submitting
-    showHighScores();
-});
-
-// Event listener for viewing high scores button
-viewHighScoresButton.addEventListener("click", function () {
     showHighScores();
 });
 
