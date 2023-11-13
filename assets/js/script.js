@@ -109,6 +109,7 @@ function showStart() {
     startScreen.style.display = "flex";
     quizScreen.style.display = "none";
     endScreen.style.display = "none";
+    highScoresScreen.style.display = "none";
 }
 
 // Function to show the quiz screen
@@ -116,6 +117,7 @@ function showQuiz() {
     startScreen.style.display = "none";
     quizScreen.style.display = "flex";
     endScreen.style.display = "none";
+    highScoresScreen.style.display = "none";
 
     document.getElementById("question1").style.display = "flex";
 }
@@ -125,6 +127,7 @@ function showEnd() {
     startScreen.style.display = "none";
     quizScreen.style.display = "none";
     endScreen.style.display = "flex";
+    highScoresScreen.style.display = "none";
 }
 
 // Event listener added to take user to Quiz screen upon clicking the start button
